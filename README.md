@@ -10,3 +10,7 @@ The service can be started with:
 systemctl start inotify.service
 systemctl enable inotify.service
 ```
+
+The daemon log can be shown with:
+
+`journalctl [-f] -u inotify.service`
