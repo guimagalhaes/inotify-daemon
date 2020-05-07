@@ -1,0 +1,14 @@
+[Unit]
+Description=inotify debug service
+Before=cloud-init-local.service
+
+[Service]
+ExecStart=/usr/bin/inotify.sh
+TimeoutSec=0
+Restart=on-failure
+
+# Output needs to appear in instance console output
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
